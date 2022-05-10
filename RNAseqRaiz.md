@@ -1,6 +1,7 @@
 ## RNA seq de muestras de raíz en Pinus pinaster
 
 ### 1. Cómo acceder a las raw reads y descripción de sus nombres
+
 Las raw reads de raíz y tallo están aquí: /home/irene/PinasterRaizRNAseqReads
 
 Yo solo voy a utilizar las de raíz.
@@ -8,6 +9,7 @@ Yo solo voy a utilizar las de raíz.
 Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 
 Hasta el guión bajo _ no proporciona información de la muestra
+
 Tras el guión bajo nos podemos encontrar o un 1 o un 18 (como en este ejemplo)
 
 1: Portainjertos sensible
