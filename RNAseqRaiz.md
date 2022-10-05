@@ -55,8 +55,5 @@ MULTIQC ya reconoce los archivos que necesita (los acabados en *.zip*). También
 multiqc *_fastqc.zip
 ```
 
-Obtienes como resultado el siguiente report:
+Obtienes como resultado el siguiente report: [multiqc_report](multiqc_report.html)
 
-```
-multiqc_report.html
-```
