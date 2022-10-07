@@ -1,4 +1,4 @@
-## RNA-seq de muestras de raíz en Pinus pinaster
+## RNA-seq de muestras de raíz en *Pinus pinaster*
 
 ### 1. Cómo acceder a las raw reads de RNA-seq y descripción de sus nombres
 
