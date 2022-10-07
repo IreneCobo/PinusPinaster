@@ -27,6 +27,13 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 
 ### 2. Análisis de las raw reads de RNA-seq
 
+Algunos programas son más adecuados que otros para analizar datos de RNA-seq en función de si se tiene un transcriptoma o genoma de referencia, de si el genoma/transcriptoma está completamente anotado etc... Sin embargo, dentro de cada categoría, en muchos casos hay varios programas que hacen esencialmente lo mismo (por ejemplo, Salmon y Kallisto son pseudoaligners para mapear reads contra transcriptomas de referencia parcialmente anotados). Los siguientes artículos son de utilidad para tener una visión más clara sobre cómo tomar decisiones a la hora de analizar datos de RNA-seq (tener en cuenta que esto ha sido escrito en 2022-2023, así que con el tiempo estos artículos pueden quedar desactualizados):
+
+- [**Systematic comparison and assessment of RNA-seq procedures for gene expression quantitative analysis**, Corchete et al. 2020](https://doi.org/10.1038/s41598-020-76881-x)
+- [**Approaches to variant discovery for conifer transcriptome sequencing**, Telfer et al. 2018](https://doi.org/10.1371/journal.pone.0205835)
+- [**Applications of transcriptome in conifer species**, Wei et al. 2022](https://doi.org/10.1007/s11240-022-02322-4)
+- [**A survey of best practices for RNA-seq data analysis**, Conesa et al. 2016](https://doi.org/10.1186/s13059-016-0881-8)
+
 **2.1. Control de calidad con FASTQC/MULTIQC**
 
 Primero, en esa misma carpeta, utilicé el siguiente código para realizar el análisis de FASTQC (utilizo la versión 0.11.7)
