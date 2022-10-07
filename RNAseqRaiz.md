@@ -29,9 +29,10 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 
 **2.1. Control de calidad con FASTQC/MULTIQC**
 
-Primero, en esa misma carpeta, utilicé el siguiente código para realizar el análisis de FASTQC
+Primero, en esa misma carpeta, utilicé el siguiente código para realizar el análisis de FASTQC (utilizo la versión 0.11.7)
 
 ```
+module load fastqc/0.11.7
 fastqc Lib*
 ```
 
@@ -43,7 +44,7 @@ fastqc /home/FCAM/icobosimon/PineTestRaw/Lib*
 
 Como son 24 muestras de raíz, obtienes dos resultados por muestra: un archivo acabado en *.html* y otro en *.zip*
 
-Ahora utilizo [MULTIQC](https://multiqc.info/docs/) para obtener un resumen de los resultados de FASTQC de las 24 muestras. MULTIQC te ofrece un report en formato *html* que contiene todos los resultados de FASTQC de todas las muestras en conjunto. Para ello, en la misma carpeta donde están los resultados de FASTC, corres el siguiente comando:
+Ahora utilizo [MULTIQC](https://multiqc.info/docs/) v1.12 para obtener un resumen de los resultados de FASTQC de las 24 muestras. MULTIQC te ofrece un report en formato *html* que contiene todos los resultados de FASTQC de todas las muestras en conjunto. Para ello, en la misma carpeta donde están los resultados de FASTC, corres el siguiente comando:
 
 ```
 multiqc .
