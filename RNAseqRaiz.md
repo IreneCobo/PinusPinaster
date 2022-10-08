@@ -75,7 +75,7 @@ Aunque en tallo y acícula se utilizó el programa [Reformat de BBMap](https://g
 - Scan the read with a 4-base wide sliding window, cutting when the average quality per base drops below 15 (Flag: SLIDINGWINDOW:4:15). El usado por reformat era 20; en el manual de la UConn, 25. 
 - Drop reads below the 36 bases long (Flag: MINLEN:36). El usado por reformat era 30, en el manual de la UConn, 45
 
-El código quedó de la siguiente manera (aquí con los thresholds del programa reformat adaptado para trimmomatic): 
+El código quedó de la siguiente manera (aquí con los thresholds del programa reformat adaptado para trimmomatic). Como son Single End reads, uso el código de trimmomatic para single ends (SE)
 
 ```
 module load Trimmomatic/0.39
@@ -92,6 +92,43 @@ Aunque no hay consenso en la necesidad de eliminar o no el RNA ribosomal o rRNA 
 Dado que se realizó esta eliminación de rRNA en hoja y tallo, voy a realizarlo también en raíz, de este modo aseguro que los resultados sean comparables. 
 
 Cambio de opinión tras leer el [manual de SortMeRNA](https://bioinfo.lifl.fr/RNA/sortmerna/code/SortMeRNA-user-manual-v2.1.pdf). Dice que "The main application of SortMeRNA is filtering rRNA from metatranscriptomic data.". Nosotros no trabajamos con datos meta-transcriptómicos, por eso en ninguno de los manuales de RNA-seq para transcriptómica he visto la eliminación de rRNA de las reads. Sí que he visto, en cambio, eliminar contaminantes en el transcriptoma de referencia antes del mapeo de las reads contra él, y es lo que voy a hacer. Usaré para ello el program enTAP. Mantendré las dos versiones del transcriptoma de referencia (con y sin contaminantes) y realizaré el DE analysis usando ambos, por si acaso. 
+
+Antes de ponerme con el contaminant filtering using EnTAP voy a preguntar cómo se realizó el ensamblaje de novo del transcriptoma (por si acaso este contaminant filtering ya se ha hecho y lo hago otra vez en tonto). Mientras tanto, voy a ir usando Salmon para el mapeo de reads contra el transcriptoma de referencia para ir familiarizándome con el programa y luego haré el DE análisis usando DESeq2. 
+
+**2.4. Salmon: Mapping y conteo**
+
+Aunque he usado siempre kallisto hasta ahora, salmon y kallisto son pseudo-aligners que hacen esencialmente lo mismo (apropiados para transcriptomas de referencia de especies no modelo, que no están completamente anotados). [Aquí](https://gencore.bio.nyu.edu/salmon-kallisto-rapid-transcript-quantification-for-rna-seq-data/) hay una comparación del año 2016 de la velocidad y accuracy de ambos pseudo-aligners. 
+
+Utilizo el [manual de salmon](https://salmon.readthedocs.io/en/latest/salmon.html)
+
+Lo primero que hay que hay que hacer es indexar el transcriptoma de referencia. Para ello uso el siguiente código
+
+```
+module load salmon/1.9.0
+salmon index -t pinaster.all.cdhit.fasta -i pinaster_index -k 31
+```
+Flags:
+-t: el nombre del transcriptoma de referencia
+-i el nombre de la carpeta que contendrá los outputs de la indexación
+-k: el tamaño mínimo de los k-mers considerados aceptables (the k size selected here will act as the minimum acceptable length for a valid match). We find that a k of 31 seems to work well for reads of 75bp or longer, but you might consider a smaller k if you plan to deal with shorter reads. (Según el mutiqc report el tamaño de nuestras muestras cae en 75 bp)
+
+Una vez indexado, para obtener las "counts" de las reads mapeadas contra el transcriptoma de referencia (por cada individuo) utilizo el siguiente código. Estas "counts" se usarán para el DE analisis.
+
+```
+module load salmon/1.9.0
+salmon quant --threads 8 -i pinaster_index -l IU -r TrimmedReformat_RaizIndv10PortaSPuaSSequia.fastq.gz --validateMappings -o TrimmedReformat_RaizIndv10PortaSPuaSSequia_quant
+```
+
+Flags:
+-Threads: Es el número de cpus que serán usadas por el supercomputador para llevar a cabo el análisis. El propio manual dice que han visto que se obtienen resultados óptimos usando entre 8 y 12, por eso elegí 8
+-i: El nombre de la carpeta con los resultados de la indexación, que dimos en el paso anterior
+-l: library type. Según el manual, para librerías comprimidas en fastq.gz, hay que poner IU
+-r: El nombre de la librería que vamos a mapear (se usa la flag -r para single ends, como es mi caso)
+-o: El nombre de la carpeta que contendrá los outputs del mapeo (con las counts). Le he puesto el mismo nombre que el individuo
+
+
+
+
 
 
 
