@@ -126,6 +126,12 @@ Flags:
 - -r: El nombre de la librería que vamos a mapear (se usa la flag -r para single ends, como es mi caso)
 - -o: El nombre de la carpeta que contendrá los outputs del mapeo (con las counts). Le he puesto el mismo nombre que el individuo
 
+```
+salmon quant --threads 8 -i pinaster_index -l A -r /home/FCAM/icobosimon/PineTest/TrimmomaticReformatLorenzo/TrimmedReformat_RaizIndv10PortaSPuaSSequia.fastq.gz --validateMappings --writeUnmappedNames -o TrimmedReformat_RaizIndv10PortaSPuaSSequia_quant_UnmappedNames
+```
+
+También usé este código para incluir la flag *--writeUnmappedNames*, que "will tell Salmon to write out the names of reads that do not map to the transcriptome."
+
 
 
 
