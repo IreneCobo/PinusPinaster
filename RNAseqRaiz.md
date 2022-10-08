@@ -108,9 +108,9 @@ module load salmon/1.9.0
 salmon index -t pinaster.all.cdhit.fasta -i pinaster_index -k 31
 ```
 Flags:
--t: el nombre del transcriptoma de referencia
--i el nombre de la carpeta que contendrá los outputs de la indexación
--k: el tamaño mínimo de los k-mers considerados aceptables (the k size selected here will act as the minimum acceptable length for a valid match). We find that a k of 31 seems to work well for reads of 75bp or longer, but you might consider a smaller k if you plan to deal with shorter reads. (Según el mutiqc report el tamaño de nuestras muestras cae en 75 bp)
+- -t: el nombre del transcriptoma de referencia
+- -i el nombre de la carpeta que contendrá los outputs de la indexación
+- -k: el tamaño mínimo de los k-mers considerados aceptables (the k size selected here will act as the minimum acceptable length for a valid match). We find that a k of 31 seems to work well for reads of 75bp or longer, but you might consider a smaller k if you plan to deal with shorter reads. (Según el mutiqc report el tamaño de nuestras muestras cae en 75 bp)
 
 Una vez indexado, para obtener las "counts" de las reads mapeadas contra el transcriptoma de referencia (por cada individuo) utilizo el siguiente código. Estas "counts" se usarán para el DE analisis.
 
@@ -120,11 +120,11 @@ salmon quant --threads 8 -i pinaster_index -l IU -r TrimmedReformat_RaizIndv10Po
 ```
 
 Flags:
--Threads: Es el número de cpus que serán usadas por el supercomputador para llevar a cabo el análisis. El propio manual dice que han visto que se obtienen resultados óptimos usando entre 8 y 12, por eso elegí 8
--i: El nombre de la carpeta con los resultados de la indexación, que dimos en el paso anterior
--l: library type. Según el manual, para librerías comprimidas en fastq.gz, hay que poner IU
--r: El nombre de la librería que vamos a mapear (se usa la flag -r para single ends, como es mi caso)
--o: El nombre de la carpeta que contendrá los outputs del mapeo (con las counts). Le he puesto el mismo nombre que el individuo
+- --threads: Es el número de cpus que serán usadas por el supercomputador para llevar a cabo el análisis. El propio manual dice que han visto que se obtienen resultados óptimos usando entre 8 y 12, por eso elegí 8
+- -i: El nombre de la carpeta con los resultados de la indexación, que dimos en el paso anterior
+- -l: library type. Según el manual, para librerías comprimidas en fastq.gz, hay que poner IU
+- -r: El nombre de la librería que vamos a mapear (se usa la flag -r para single ends, como es mi caso)
+- -o: El nombre de la carpeta que contendrá los outputs del mapeo (con las counts). Le he puesto el mismo nombre que el individuo
 
 
 
