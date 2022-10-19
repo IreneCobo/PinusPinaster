@@ -132,9 +132,29 @@ salmon quant --threads 8 -i pinaster_index -l A -r TrimmedReformat_RaizIndv10Por
 
 También usé este código para incluir la flag *--writeUnmappedNames*, que "will tell Salmon to write out the names of reads that do not map to the transcriptome."
 
+Los *.log* files obtenidos en los outputs obtenidos tras correr este código mostraron los siguientes valores de mapeo
 
+**Tabla con los resultados del mapeo contra el transcriptoma de referencia de cada combinación individuo/púa-porta/tratamiento**
 
-
+| Individuo | Porta | Púa | Tratamiento | Porcentaje de lecturas mapeadas | Número de lecturas mapeadas |
+| --------- | ----- | --- | ----------- | ------------------------------- | --------------------------- |
+| 1 | Sensible | Oria (Tolerante) | Control | 88.9612% |  18,676,081 |
+| 2 | Sensible | Oria (Tolerante) | Sequía | 87.6052% | 9,931,452 |
+| 3 | Tolerante | Oria (Tolerante) | Sequía | 85.5583% | 16,921,952 |
+| 4 | Sensible | Galicia (Sensible) | Control | 85.604% | 28,207,117 |
+| 4 | Tolerante | Galicia (Sensible) | Control | 86.0707% | 15,725,203 |
+| 5 | Sensible | Galicia (Sensible) | Control | 85.0118% | 11,937,000 |
+| 5 | Tolerante | Galicia (Sensible) | Control | 89.3177% | 14,269,540 |
+| 6 | Sensible | Galicia (Sensible) | Control | 86.5574% | 10,716,544 |
+| 6 | Tolerante | Galicia (Sensible) | Control | 87.7721% | 27,582,364 |
+| 7 | Tolerante | Oria (Tolerante) | Control | 88.8661% | 10,677,096 |
+| 8 | Sensible | Galicia (Sensible) | Sequía | 89.7663% | 10,705,819 |
+| 9 | Sensible | Oria (Tolerante) | Control | 76.8114% | 9,141,508 |
+| 9 | Tolerante | Oria (Tolerante) | Control | 84.3641% | 11,062,264 |
+| 10 | Sensible | Galicia (Sensible) | Sequía | 86.0956% | 8,529,399 |
+| 10 | Tolerante | Galicia (Sensible) | Sequía | 89.3171% | 12,002,344 |
+| 11 | Sensible | Oria (Tolerante) | Control | 85.8028% | 10,052,350 |
+| 11 | Tolerante | Oria (Tolerante) | Sequía | 87.9333% | 11,886,579 |
 
 
 
