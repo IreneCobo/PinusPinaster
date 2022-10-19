@@ -155,7 +155,13 @@ Los *.log* files obtenidos en los outputs obtenidos tras correr este código mos
 | 10 | Tolerante | Galicia (Sensible) | Sequía | 89.3171% | 12,002,344 |
 | 11 | Sensible | Oria (Tolerante) | Control | 85.8028% | 10,052,350 |
 | 11 | Tolerante | Oria (Tolerante) | Sequía | 87.9333% | 11,886,579 |
-
+| 12 | Sensible | Oria (Tolerante) | Sequía | 87.7883% | 12,525,717 |
+| 12 | Tolerante | Galicia (Sensible) | Sequía | 87.5985% | 17,221,253 |
+| 15 | Sensible | Oria (Tolerante) | Sequía | 82.8963% | 13,155,985 |
+| 15 | Tolerante | Oria (Tolerante) | Control | 87.4905% | 19,492,827 |
+| 16 | Sensible | Galicia (Sensible) | Sequía | 82.777% | 10,172,625 |
+| 16 | Tolerante | Galicia (Sensible) | Sequía | 89.057% | 14,212,596 |
+| 17 | Tolerante | Oria (Tolerante) | Sequía | 83.2371% | 24,945,279 |
 
 
 
