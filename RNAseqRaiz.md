@@ -328,9 +328,9 @@ summary(resPortaTreatmentTvsS)#No DE genes
 ```
 **Resultados para todas las comparaciones**
 
-| **EFECTO DEL PORTA (Tolerante vs Sensible)** |
+| **EFECTO DEL PORTA (Tolerante vs Sensible)** | -- | -- | -- | -- | -- | -- |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| **PÚA GALICIA** | 
+| **PÚA GALICIA** | -- | -- | -- | -- | -- | -- |
 | **Sequía + Control** | **Number of reads with nonzero total read count | adjusted p-value | LFC > 0 (up) | LFC < 0 (down) | outliers | low counts** |
 | **Diseño: Porta** | 73598 | < 0.1 | 2507, 3.4% | 2971, 4% | 355, 0.48% | 4271, 5.8% |
 | **Diseño: Porta + Treatment** | 73598 | < 0.1 | 3187, 4.3% | 3876, 5.3% | 462, 0.63% | 7115, 9.7% |
