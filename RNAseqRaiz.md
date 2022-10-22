@@ -163,6 +163,179 @@ Los *.log* files obtenidos en los outputs obtenidos tras correr este código mos
 | 16 | Tolerante | Galicia (Sensible) | Sequía | 89.057% | 14,212,596 |
 | 17 | Tolerante | Oria (Tolerante) | Sequía | 83.2371% | 24,945,279 |
 
+**2.5. Análisis de expresión diferencial (DE analysis) con DESeq2**
+
+Este análisis se realiza en R. Como se observa en la tabla anterior, tenemos injertos púa-porta en distintas combinaciones: Porta Oria (tolerante)-púa tolerante, porta Oria (tolerante)-púa sensible, porta Galicia(sensible)-púa tolerante, porta Galicia (sensible)-púa sensible. Para cada una de estas combinaciones, hay muestras sometidas a tratamiento de sequía y otras control (bien regadas). 
+
+Por lo tanto, en el análisis con DESeq2 hicimos dos tipos de comparaciones:
+
+- Efecto del porta (Tolerante vs Sensible) comparando púas injertadas de Galicia (entre ellas) y de Oria (entre ellas), poniendo el tratamiento (control-sequía) como coeficiente. También hicimos lo mismo comparando únicamente los individuos sometidos a sequía.
+- Efecto de la púa (Oria(Tolerante) vs Galicia(Sensible) comparando portas sensibles (entre ellos) y tolerantes (entre ellos), poniendo el tratamiento (control-sequía) como coeficiente. También hicimos lo mismo comparando únicamente los individuos sometidos a sequía. 
+
+A continuación se muestra el código de R usado para la comparación de efecto del porta (T vs S) comparando púas de Galicia de ambos tratamientos (Sequía vs Control). 
+
+```
+#Import the libraries needed for the analysis (both count matrix and DE analysis)
+library("tximport")
+library("readr")
+library("DESeq2")
+
+#Set the working directory where you have the tsv files (outputs for kallisto)
+outputPrefix <- "raizpinasterTvsS_Galicia_deseq2"
+dir <- "~/Desktop/Juan de la Cierva Formacion/IRENE/RAIZ/SalmonCounts/EfectoPorta(TvsS)Sequia_Galicia/"
+setwd(dir)
+getwd()
+#Produce a vector with the tsv filenames of the tsv files in the working directory
+filenames <- list.files(pattern="*quant.sf", full.names=TRUE)
+length(filenames)
+str(filenames)
+filenames
+
+#Create the tx2gene table
+sf4<-read.table("I4PoSPuSC_quant.sf", header=T)
+sf5<-read.table("I5PoSPuSC_quant.sf", header=T)
+
+dim(sf4)#206574
+dim(sf5)
+head(sf4)
+head(sf5)
+
+tx2gene<-sf4[,c(1,1)]
+head(tx2gene)
+str(tx2gene)
+colnames(tx2gene)<-c("TXNAME","GENEID")
+
+#Create the Count matrix for DESeq2 using the kallisto abundance.tsv files and the tx2gene matrix using "tximport"
+txi.salmon <- tximport(filenames, type = "salmon", tx2gene = tx2gene, ignoreTxVersion = TRUE)
+length(txi.salmon)
+dim(txi.salmon$counts)
+head(txi.salmon)
+sampleNames <- c("I10PoSPuSS","I10PoTPuSS","I12PoTPuSS","I16PoSPuSS","I16PoTPuSS","I4PoSPuSC","I4PoTPuSC","I5PoSPuSC","I5PoTPuSC","I6PoSPuSC","I6PoTPuSC","I8PoSPuSS")#Add sample names
+colnames(txi.salmon$counts) <- sampleNames
+head(txi.salmon)
+sampleGenotype <- c("I10","I10","I12","I16","I16","I4","I4","I5","I5","I6","I6","I8")
+samplePorta <- c("S","T","T","S","T","S","T","S","T","S","T","S")
+samplePua <- c("G","G","G","G","G","G","G","G","G","G","G","G")
+sampleTreatment <- c("S","S","S","S","S","C","C","C","C","C","C","S")
+length(sampleGenotype)
+length(sampleNames)
+length(samplePorta)
+length(samplePua)
+length(sampleTreatment)
+
+#Add the conditions (timepoints)
+sampleTable <- data.frame(Genotype = sampleGenotype, Porta=samplePorta, Pua=samplePua, Treatment=sampleTreatment, Sample = sampleNames)#Add the locations, conditions and samplenames to the dataframe
+sampleTable
+str(sampleTable)
+ddstxi <- DESeqDataSetFromTximport(txi.salmon, sampleTable, design = ~ Treatment)#Format for DESeq2 and set the design by condition (timempoints)
+str(ddstxi)
+#The variables have to be in "factor" format to be used in the model
+colData(ddstxi)$Genotype <- factor(colData(ddstxi)$Genotype)
+colData(ddstxi)$Porta <- factor(colData(ddstxi)$Porta)
+colData(ddstxi)$Pua <- factor(colData(ddstxi)$Pua)
+colData(ddstxi)$Treatment <- factor(colData(ddstxi)$Treatment)
+colData(ddstxi)$Sample <- factor(colData(ddstxi)$Sample)
+ddstxi
+colData(ddstxi)
+
+#Prefiltering, keep only rows that have at least 10 reads total
+keep <- rowSums(counts(ddstxi)) >= 10
+length(keep)#206574
+dim(ddstxi)#206574 
+dds <- ddstxi[keep,]
+dim(dds)#73598
+
+colData(dds)
+levels(dds$Genotype)#"I10" "I12" "I16" "I4"  "I5"  "I6"  "I8"
+levels(dds$Porta)#"S"   "T" 
+levels(dds$Pua)#"G"
+levels(dds$Treatment)#"C" "S"
+levels(dds$Sample)#"I10PoSPuSS" "I10PoTPuSS" "I12PoTPuSS" "I16PoSPuSS" "I16PoTPuSS" "I4PoSPuSC"  "I4PoTPuSC"  "I5PoSPuSC"  "I5PoTPuSC"  "I6PoSPuSC" "I6PoTPuSC"  "I8PoSPuSS"
+
+#Multifactor design (timepoints and locations)
+ddsPorta <- dds #First, I copy the matrix to be able to correct mistakes
+ddsPortaTreatment <- dds
+
+design(ddsPorta) <- formula(~ Porta)#I decided to use only "porta" in the model because we do not want to test the treatment
+design(ddsPortaTreatment) <- formula(~ Porta+Treatment)#I decided to use only "porta" in the model because we do not want to test the treatment
+
+colData(ddsPorta)
+colData(ddsPortaTreatment)
+
+#Plotting the results PCA
+vsd<-vst(dds)
+plotPCA(vsd, intgroup=c("Treatment", "Porta"))
+
+#PCA plottin using this: https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#principal-component-plot-of-the-samples
+library(ggplot2)
+pcaData <- plotPCA(vsd, intgroup=c("Treatment", "Porta"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+ggplot(pcaData, aes(PC1, PC2, color=Treatment, shape=Porta)) +
+  geom_point(size=3) +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+  labs(title="Efecto del Porta (Tolerante T vs Sensible S). Púa Galicia")+
+  coord_fixed()
+
+#DE analysis for time series experiment
+#In order to test for any differences over multiple time points, one can use a design including the time factor, and then test using the likelihood ratio test as described in the following section, where the time factor is removed in the reduced formula (condition in this case)
+ddsPortaDESeq <- DESeq(ddsPorta)
+ddsPortaTreatmentDESeq <- DESeq(ddsPortaTreatment)
+dim(ddsPortaDESeq)
+dim(ddsPortaTreatmentDESeq)
+
+#Cynthia´s code to obtain the results
+#Timepoint design
+resPorta <- results(ddsPortaDESeq)
+resPortaTvsS<- results (ddsPortaDESeq, contrast=c("Porta","T","S"))#Contrast 2 vs 1
+
+resPortaTreatment <- results(ddsPortaTreatmentDESeq)
+resPortaTreatmentTvsS<- results (ddsPortaTreatmentDESeq, contrast=c("Porta","T","S"))#Contrast 2 vs 1
+
+#Summary of the obtained DE genes
+#For timepoint design
+summary(resPorta)
+#out of 73598 with nonzero total read count
+#adjusted p-value < 0.1
+#LFC > 0 (up)       : 2507, 3.4%
+#LFC < 0 (down)     : 2971, 4%
+#outliers [1]       : 355, 0.48%
+#low counts [2]     : 4271, 5.8%
+
+summary(resPortaTvsS)
+#out of 73598 with nonzero total read count
+#adjusted p-value < 0.1
+#LFC > 0 (up)       : 2507, 3.4%
+#LFC < 0 (down)     : 2971, 4%
+#outliers [1]       : 355, 0.48%
+#low counts [2]     : 4271, 5.8%
+
+summary(resPortaTreatment)#No DE genes
+#out of 73598 with nonzero total read count
+#adjusted p-value < 0.1
+#LFC > 0 (up)       : 5545, 7.5%
+#LFC < 0 (down)     : 5949, 8.1%
+#outliers [1]       : 462, 0.63%
+#low counts [2]     : 12786, 17%
+
+summary(resPortaTreatmentTvsS)#No DE genes
+#out of 73598 with nonzero total read count
+#adjusted p-value < 0.1
+#LFC > 0 (up)       : 3187, 4.3%
+#LFC < 0 (down)     : 3876, 5.3%
+#outliers [1]       : 462, 0.63%
+#low counts [2]     : 7115, 9.7%
+```
+**Resultados para todas las comparaciones**
+
+| **EFECTO DEL PORTA (Tolerante vs Sensible)** |
+| -------- |
+| **PÚA GALICIA** | 
+| **Sequía + Control** | **Number of reads with nonzero total read count | adjusted p-value | LFC > 0 (up) | LFC < 0 (down) | outliers | low counts** |
+| **Diseño: Porta** | 73598 | < 0.1 | 2507, 3.4% | 2971, 4% | 355, 0.48% | 4271, 5.8% |
+| **Diseño: Porta + Treatment** | 73598 | < 0.1 | 3187, 4.3% | 3876, 5.3% | 462, 0.63% | 7115, 9.7% |
+| **Solo sequía | Number of reads with nonzero total read count | adjusted p-value | LFC > 0 (up) | LFC < 0 (down) | outliers | low counts** |
+
 
 
 
