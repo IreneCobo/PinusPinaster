@@ -331,10 +331,21 @@ summary(resPortaTreatmentTvsS)#No DE genes
 | **EFECTO DEL PORTA (Tolerante vs Sensible)** | -- | -- | -- | -- | -- | -- |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | **PÚA GALICIA** | -- | -- | -- | -- | -- | -- |
-| **Sequía + Control** | **Number of reads with nonzero total read count | adjusted p-value | LFC > 0 (up) | LFC < 0 (down) | outliers | low counts** |
-| **Diseño: Porta** | 73598 | < 0.1 | 2507, 3.4% | 2971, 4% | 355, 0.48% | 4271, 5.8% |
-| **Diseño: Porta + Treatment** | 73598 | < 0.1 | 3187, 4.3% | 3876, 5.3% | 462, 0.63% | 7115, 9.7% |
-| **Solo sequía | Number of reads with nonzero total read count | adjusted p-value | LFC > 0 (up) | LFC < 0 (down) | outliers | low counts** |
+| **Sequía + Control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Porta* | 73598 | < 0.1 | 2507, 3.4% | 2971, 4% | 355, 0.48% | 4271, 5.8% |
+| *Diseño: Porta + Treatment* | 73598 | < 0.1 | 3187, 4.3% | 3876, 5.3% | 462, 0.63% | 7115, 9.7% |
+| **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Porta* | 59867 | < 0.1 | 1801, 3% | 2091, 3.5% | 57, 0.095% | 8125, 14% |
+| **PÚA ORIA** | -- | -- | -- | -- | -- | -- |
+| **Sequía + Control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Porta* | 73033 | < 0.1 | 1667, 2.3% | 1839, 2.5% | 783, 1.1% | 5652, 7.7% |
+| *Diseño: Porta + Treatment* | 73033 | < 0.1 | 1713, 2.3% | 1789, 2.4% | 1013, 1.4% | 7057, 9.7% |
+| **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Porta* | 64304 | < 0.1 | 1113, 1.7% | 1086, 1.7% | 223, 0.35% | 9974, 16% |
+
+
+
+### Re-anotación funcional del transcriptoma de referencia (Pinus pinaster): En proceso
 
 
 
