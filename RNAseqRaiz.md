@@ -343,7 +343,12 @@ summary(resPortaTreatmentTvsS)#No DE genes
 | **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Porta* | 64304 | < 0.1 | 1113, 1.7% | 1086, 1.7% | 223, 0.35% | 9974, 16% |
 
+**PCAs efecto del porta**
 
+![EfectoPortaPuaGalicia](EfectoPortaPuaGalicia.png "EfectoPortaPuaGalicia")
+![PCAGaliciaTvsSsolosequia](PCAGaliciaTvsSsolosequia.png "PCAGaliciaTvsSsolosequia")
+![PCA_EfectoPorta_PúaOria](PCA_EfectoPorta_PúaOria.png "PCA_EfectoPorta_PúaOria")
+![EfectoPortaPuaOriaSequia](EfectoPortaPuaOriaSequia.png "EfectoPortaPuaOriaSequia")
 
 ### Re-anotación funcional del transcriptoma de referencia (Pinus pinaster): En proceso
 
