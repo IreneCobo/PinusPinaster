@@ -350,6 +350,28 @@ summary(resPortaTreatmentTvsS)#No DE genes
 ![PCA_EfectoPorta_PúaOria](PCA_EfectoPorta_PúaOria.png "PCA_EfectoPorta_PúaOria")
 ![EfectoPortaPuaOriaSequia](EfectoPortaPuaOriaSequia.png "EfectoPortaPuaOriaSequia")
 
+| **EFECTO DE LA PÚA (ORIA vs GALICIA)** | -- | -- | -- | -- | -- | -- |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| **PORTA SENSIBLE** | -- | -- | -- | -- | -- | -- |
+| **Sequía + Control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Púa* | 71517 | < 0.1 | 8, 0.011% | 0, 0% | 907, 1.3% | 0, 0% |
+| *Diseño: Púa + Treatment* | 71517 | < 0.1 | 2, 0.0028% | 0, 0% | 1045, 1.5% | 0, 0% |
+| **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Púa* | 58400 | < 0.1 | 24, 0.041% | 6, 0.01% | 313, 0.54% | 11323, 19% |
+| **PORTA TOLERANTE** | -- | -- | -- | -- | -- | -- |
+| **Sequía + Control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Púa* | 74030 | < 0.1 | 51, 0.069% | 7, 0.0095% | 259, 0.35% | 12866, 17% |
+| *Diseño: Púa + Treatment* | 74030 | < 0.1 | 85, 0.11% | 14, 0.019% | 548, 0.74% | 12850, 17% |
+| **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Púa* | 64211 | < 0.1 | 456, 0.71% | 101, 0.16% | 99, 0.15% | 24897, 39% |
+
+**PCAs efecto de la púa**
+
+![PCAEfectoPuaOvsGPortaSensible](PCAEfectoPuaOvsGPortaSensible.png "PCAEfectoPuaOvsGPortaSensible")
+![PCA_EfectoPuaOvsGPortaSensibleSoloSequia](PCA_EfectoPuaOvsGPortaSensibleSoloSequia.png "PCA_EfectoPuaOvsGPortaSensibleSoloSequia")
+![PCA_EfectoPuaOvsGPortaTolerante](PCA_EfectoPuaOvsGPortaTolerante.png "PCA_EfectoPuaOvsGPortaTolerante")
+![PCA_EfectoPuaOriavsGaliciaPortaToleranteSequia](PCA_EfectoPuaOriavsGaliciaPortaToleranteSequia.png "PCA_EfectoPuaOriavsGaliciaPortaToleranteSequia")
+
 ### Re-anotación funcional del transcriptoma de referencia (Pinus pinaster): En proceso
 
 
