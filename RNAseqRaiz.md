@@ -377,7 +377,8 @@ summary(resPortaTreatmentTvsS)#No DE genes
 
 - Poner etiquetas con los nombres de los individuos en los PCA
 - Normalizar con todas las muestras
-- Comparar los controles
+- Comparar los controles entre ellos
+- Efecto del tratamiento (es decir, sequía vs control en las mismas construcciones)
 
 
 
