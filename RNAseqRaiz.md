@@ -375,7 +375,9 @@ summary(resPortaTreatmentTvsS)#No DE genes
 ### Re-anotación funcional del transcriptoma de referencia (Pinus pinaster): En proceso
 
 
-
+- Poner etiquetas con los nombres de los individuos en los PCA
+- Normalizar con todas las muestras
+- Comparar los controles
 
 
 
