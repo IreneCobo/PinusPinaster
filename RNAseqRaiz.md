@@ -12,9 +12,9 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 **Descripción del nombre**
 1. Hasta el guión bajo _ no proporciona información de la muestra
 
-2. Tras el guión bajo nos podemos encontrar o un 1 o un 18 (como en este ejemplo) que habla del portainjertos. El portainjertos contiene la raíz y un trozo grande de tallo
+2. Tras el guión bajo nos podemos encontrar o un 1 o un 18 (como en este ejemplo) que habla del portainjertos. El portainjertos contiene la raíz y un trozo grande de tallo. 
 
-- 1: Portainjertos sensible
+- 1: Portainjertos sensible 
 - 18: Portainjertos tolerante
 
 3. Después hay un guión -. Lo que viene después del guión es el número del individuo (en este caso es el individuo 7)
@@ -24,6 +24,8 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 - R: Raíz (o A: acícula)
 - C: Habla del tratamiento que puede ser Control (o S sequía)
 - O: Habla de la púa, que puede ser Oria, que es tolerante a la sequía (o G Galicia, sensible a la sequía). La púa se colocó muy arriba, luego la púa tiene acículas y un poco de tallo
+
+Las púas son réplicas clonales de los parentales (uno de Galicia, y por lo tanto, se espera sensible a la sequía, y otro de Oria, y por lo tanto, se espera tolerante a la sequía), mientras que los portas son los descendientes de la F1 resultante del cruzamiento de los parentales Galicia x Oria. Se hizo un estudio fenotípico de la F1 y se determinó quienes eran sensibles y tolerantes a la sequía. De ellos se eligieron los individuos 1 (sensible) y 18 (tolerante) para usar como portainjertos (en este artículo se explica por qué (De Miguel et al. 2016). 
 
 ### 2. Análisis de las raw reads de RNA-seq
 
@@ -136,32 +138,32 @@ Los *.log* files obtenidos en los outputs obtenidos tras correr este código mos
 
 **Tabla con los resultados del mapeo contra el transcriptoma de referencia de cada combinación individuo/púa-porta/tratamiento**
 
-| Individuo | Porta | Púa | Tratamiento | Porcentaje de lecturas mapeadas | Número de lecturas mapeadas |
-| --------- | ----- | --- | ----------- | ------------------------------- | --------------------------- |
-| 1 | Sensible | Oria (Tolerante) | Control | 88.9612% |  18,676,081 |
-| 2 | Sensible | Oria (Tolerante) | Sequía | 87.6052% | 9,931,452 |
-| 3 | Tolerante | Oria (Tolerante) | Sequía | 85.5583% | 16,921,952 |
-| 4 | Sensible | Galicia (Sensible) | Control | 85.604% | 28,207,117 |
-| 4 | Tolerante | Galicia (Sensible) | Control | 86.0707% | 15,725,203 |
-| 5 | Sensible | Galicia (Sensible) | Control | 85.0118% | 11,937,000 |
-| 5 | Tolerante | Galicia (Sensible) | Control | 89.3177% | 14,269,540 |
-| 6 | Sensible | Galicia (Sensible) | Control | 86.5574% | 10,716,544 |
-| 6 | Tolerante | Galicia (Sensible) | Control | 87.7721% | 27,582,364 |
-| 7 | Tolerante | Oria (Tolerante) | Control | 88.8661% | 10,677,096 |
-| 8 | Sensible | Galicia (Sensible) | Sequía | 89.7663% | 10,705,819 |
-| 9 | Sensible | Oria (Tolerante) | Control | 76.8114% | 9,141,508 |
-| 9 | Tolerante | Oria (Tolerante) | Control | 84.3641% | 11,062,264 |
-| 10 | Sensible | Galicia (Sensible) | Sequía | 86.0956% | 8,529,399 |
-| 10 | Tolerante | Galicia (Sensible) | Sequía | 89.3171% | 12,002,344 |
-| 11 | Sensible | Oria (Tolerante) | Control | 85.8028% | 10,052,350 |
-| 11 | Tolerante | Oria (Tolerante) | Sequía | 87.9333% | 11,886,579 |
-| 12 | Sensible | Oria (Tolerante) | Sequía | 87.7883% | 12,525,717 |
-| 12 | Tolerante | Galicia (Sensible) | Sequía | 87.5985% | 17,221,253 |
-| 15 | Sensible | Oria (Tolerante) | Sequía | 82.8963% | 13,155,985 |
-| 15 | Tolerante | Oria (Tolerante) | Control | 87.4905% | 19,492,827 |
-| 16 | Sensible | Galicia (Sensible) | Sequía | 82.777% | 10,172,625 |
-| 16 | Tolerante | Galicia (Sensible) | Sequía | 89.057% | 14,212,596 |
-| 17 | Tolerante | Oria (Tolerante) | Sequía | 83.2371% | 24,945,279 |
+| Individuo | Porta | Púa | Tratamiento | Construcción | Réplica (construcción + tratamiento) | Porcentaje de lecturas mapeadas | Número de lecturas mapeadas |
+| --------- | ----- | --- | ----------- | ------------ | ------- | ------------------------------- | --------------------------- |
+| 1 | Sensible | Oria (Tolerante) | Control | S_O | S_O_C (A) | 88.9612% |  18,676,081 |
+| 2 | Sensible | Oria (Tolerante) | Sequía | S_O | S_O_S (B) | 87.6052% | 9,931,452 |
+| 3 | Tolerante | Oria (Tolerante) | Sequía | T_O | T_O_S (C) | 85.5583% | 16,921,952 |
+| 4 | Sensible | Galicia (Sensible) | Control | S_G | S_G_C (D) | 85.604% | 28,207,117 |
+| 4 | Tolerante | Galicia (Sensible) | Control | T_G | T_G_C (E) | 86.0707% | 15,725,203 |
+| 5 | Sensible | Galicia (Sensible) | Control | S_G | S_G_C (D) | 85.0118% | 11,937,000 |
+| 5 | Tolerante | Galicia (Sensible) | Control | T_G | T_G_C (E) | 89.3177% | 14,269,540 |
+| 6 | Sensible | Galicia (Sensible) | Control | S_G | S_G_C (D) | 86.5574% | 10,716,544 |
+| 6 | Tolerante | Galicia (Sensible) | Control | T_G | T_G_C (E) | 87.7721% | 27,582,364 |
+| 7 | Tolerante | Oria (Tolerante) | Control | T_O | T_O_C (F) | 88.8661% | 10,677,096 |
+| 8 | Sensible | Galicia (Sensible) | Sequía | S_G | S_G_S (G)|89.7663% | 10,705,819 |
+| 9 | Sensible | Oria (Tolerante) | Control | T_O | T_O_C (F) | 76.8114% | 9,141,508 |
+| 9 | Tolerante | Oria (Tolerante) | Control | T_O | T_O_C (F) |84.3641% | 11,062,264 |
+| 10 | Sensible | Galicia (Sensible) | Sequía | S_G | S_G_S (G) | 86.0956% | 8,529,399 |
+| 10 | Tolerante | Galicia (Sensible) | Sequía | T_G | T_G_S (H) | 89.3171% | 12,002,344 |
+| 11 | Sensible | Oria (Tolerante) | Control | S_O | S_O_C (A) | 85.8028% | 10,052,350 |
+| 11 | Tolerante | Oria (Tolerante) | Sequía | T_O | T_O_S (C) | 87.9333% | 11,886,579 |
+| 12 | Sensible | Oria (Tolerante) | Sequía | S_O | S_O_S (B) | 87.7883% | 12,525,717 |
+| 12 | Tolerante | Galicia (Sensible) | Sequía | T_G | T_G_S (H) | 87.5985% | 17,221,253 |
+| 15 | Sensible | Oria (Tolerante) | Sequía | S_O | S_O_S (B) | 82.8963% | 13,155,985 |
+| 15 | Tolerante | Oria (Tolerante) | Control | T_O | T_O_C (F) | 87.4905% | 19,492,827 |
+| 16 | Sensible | Galicia (Sensible) | Sequía | S_G | S_G_S (G) | 82.777% | 10,172,625 |
+| 16 | Tolerante | Galicia (Sensible) | Sequía | T_G | T_G_S (H) | 89.057% | 14,212,596 |
+| 17 | Tolerante | Oria (Tolerante) | Sequía | T_O | T_O_S (C) | 83.2371% | 24,945,279 |
 
 **2.5. Análisis de expresión diferencial (DE analysis) con DESeq2**
 
