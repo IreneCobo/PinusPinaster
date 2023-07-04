@@ -338,12 +338,16 @@ summary(resPortaTreatmentTvsS)#No DE genes
 | *Diseño: Porta + Treatment* | 73598 | < 0.1 | 3187, 4.3% | 3876, 5.3% | 462, 0.63% | 7115, 9.7% |
 | **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Porta* | 59867 | < 0.1 | 1801, 3% | 2091, 3.5% | 57, 0.095% | 8125, 14% |
+| **Solo control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Porta* | 66656 | < 0.1 | 2594, 3.9% | 2213, 3.3% | 83, 0.12% | 7754, 12% |
 | **PÚA ORIA** | -- | -- | -- | -- | -- | -- |
 | **Sequía + Control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Porta* | 73033 | < 0.1 | 1667, 2.3% | 1839, 2.5% | 783, 1.1% | 5652, 7.7% |
 | *Diseño: Porta + Treatment* | 73033 | < 0.1 | 1713, 2.3% | 1789, 2.4% | 1013, 1.4% | 7057, 9.7% |
 | **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Porta* | 64304 | < 0.1 | 1113, 1.7% | 1086, 1.7% | 223, 0.35% | 9974, 16% |
+| **Solo control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Porta* | 63001 | < 0.1 | 549, 0.87% | 639, 1% | 512, 0.81% | 9772, 16% |
 
 **PCAs efecto del porta**
 
