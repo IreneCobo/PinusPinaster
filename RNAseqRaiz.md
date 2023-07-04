@@ -364,12 +364,16 @@ summary(resPortaTreatmentTvsS)#No DE genes
 | *Diseño: Púa + Treatment* | 71517 | < 0.1 | 2, 0.0028% | 0, 0% | 1045, 1.5% | 0, 0% |
 | **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Púa* | 58400 | < 0.1 | 24, 0.041% | 6, 0.01% | 313, 0.54% | 11323, 19% |
+| **Solo control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Púa* | 64792 | < 0.1 | 59, 0.091% | 17, 0.026% | 386, 0.6% | 5025, 7.8% |
 | **PORTA TOLERANTE** | -- | -- | -- | -- | -- | -- |
 | **Sequía + Control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Púa* | 74030 | < 0.1 | 51, 0.069% | 7, 0.0095% | 259, 0.35% | 12866, 17% |
 | *Diseño: Púa + Treatment* | 74030 | < 0.1 | 85, 0.11% | 14, 0.019% | 548, 0.74% | 12850, 17% |
 | **Solo sequía** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
 | *Diseño: Púa* | 64211 | < 0.1 | 456, 0.71% | 101, 0.16% | 99, 0.15% | 24897, 39% |
+| **Solo control** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Diseño: Púa* | 64792 | < 0.1 | 140, 0.22% | 236, 0.36% | 264, 0.41% | 13818, 21% |
 
 **PCAs efecto de la púa**
 
