@@ -396,21 +396,21 @@ Resultados:
 
 1. Dendrograma como análisis exploratorio de datos. El dendrograma agrupó los individuos según el porta tolerante vs sensible (salvo dos outliers). Es esperable, ya que estamos analizando muestras de raíz.
 
-[ClusterDendrogram](ClusterDendrogram.png "ClusterDendrogram")
+![ClusterDendrogram](ClusterDendrogram.png "ClusterDendrogram")
 
 2. Soft threshold power = 4
 
-[SoftThersholdPowerSelectionMedium](SoftThersholdPowerSelectionMedium.png "SoftThersholdPowerSelectionMedium")
+![SoftThersholdPowerSelectionMedium](SoftThersholdPowerSelectionMedium.png "SoftThersholdPowerSelectionMedium")
 
 3. Obtuvimos 12 módulos con genes altamente correlacionados en cuanto a su expresión, tanto en dirección como en sentido (signed). En un principio obtuvimos 14, pero después se juntaron aquellos que tenían un perfil de expresión similar (merge) quedando finalmente 12. 
 
-[Clusterinofmoduleeigengenes](Clusterinofmoduleeigengenes.png "Clusterinofmoduleeigengenes") 
+![Clusterinofmoduleeigengenes](Clusterinofmoduleeigengenes.png "Clusterinofmoduleeigengenes") 
 
-[ClusterDendrogramWithModulesandMergedStepbyStep](ClusterDendrogramWithModulesandMergedStepbyStep.png "ClusterDendrogramWithModulesandMergedStepbyStep")
+![ClusterDendrogramWithModulesandMergedStepbyStep](ClusterDendrogramWithModulesandMergedStepbyStep.png "ClusterDendrogramWithModulesandMergedStepbyStep")
 
 4. Una vez obtenidos los doce módulos, se hizo una overlapping table con los DE genes de las diferentes comparativas y los módulos para obtener qué módulos están enriquecidos en DE genes. La significancia (p-valor) se calculó con un Test de Fisher. Los resultados se plotearon en un heatmap (el color rojo indica el p-valor, a menor p-valor, más intenso el color, y también se indica el número de overlapping genes entre los DE genes de las distintas comparativas y los módulos)
 
-[OverlappingTableTodaslasComparativas](OverlappingTableTodaslasComparativas.png "OverlappingTableTodaslasComparativas")
+![OverlappingTableTodaslasComparativas](OverlappingTableTodaslasComparativas.png "OverlappingTableTodaslasComparativas")
 
 5. Los módulos signficativos (p-valor < 0.05) se plotearon en heatmaps para ver si mostraban un perfil de expresión de interés. 5 comparativas mostraron un perfil de expresión de interés (módulos black, tan, purple y green)
 
