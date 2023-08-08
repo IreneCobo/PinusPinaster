@@ -444,35 +444,43 @@ Finalmente se realizó un GO enrichment analysis en los 7 módulos seleccionados
 **Efecto de la púa en el porta tolerante**
 
 **1. PortaTCdown**
+
 Individuos sometidos a tratamiento control, porta tolerante en todos y comparando pua oria vs galicia, genes downregulados en portas tolerantes sometidos a tratamiento control con púa Oria (o upregulados en Galicia). Es decir, la púa afecta a la expresión de los genes de los portas tolerantes no sometido a estrés hídrico, mostrando genes upregulados en portas tolerantes bien regados con púa Galicia en comparación con Oria.
 
 *1a. PortaTCdownBlack (12 overlapping genes)*
+
 ![ModuleBlackPortaToleranteControlPuaOriavsGaliciadown](ModuleBlackPortaToleranteControlPuaOriavsGaliciadown.png "ModuleBlackPortaToleranteControlPuaOriavsGaliciadown")
 ![HubGenesModuleBlackPortaToleranteControlPuaOvsGdown](HubGenesModuleBlackPortaToleranteControlPuaOvsGdown.png "HubGenesModuleBlackPortaToleranteControlPuaOvsGdown")
 ![REVIGOPortaTCdownBlack](REVIGOPortaTCdownBlack.png "REVIGOPortaTCdownBlack")
 
 *1b. PortaTCdownTan (39 overlapping genes)*
+
 ![ModuleTanPortaTControlPuaOvsGdown](ModuleTanPortaTControlPuaOvsGdown.png "ModuleTanPortaTControlPuaOvsGdown")
 ![HubGenesPortaTCdownTan](HubGenesPortaTCdownTan.png "HubGenesPortaTCdownTan")
 ![REVIGOPortaTCdownTan](REVIGOPortaTCdownTan.png "REVIGOPortaTCdownTan")
 
 **2. PortaTSup**
+
 Individuos sometidos a sequía, porta tolerante también en todos y comparando pua oria vs galicia, genes upregulados en la púa oria. Es decir, la púa afecta a la expresión de los genes de los portas tolerantes sometidos a estrés hídrico, mostrando genes upregulados en portas tolerantes sometidos a sequía con púa Oria en comparación con púa Galicia. 
 
 *2a. PortaTSupPurple (16 overlapping genes)*
+
 ![ModulePurplePortaTSequiaPuaOvsGup](ModulePurplePortaTSequiaPuaOvsGup.png "ModulePurplePortaTSequiaPuaOvsGup")
 ![HubGenesPortaTSupPurple](HubGenesPortaTSupPurple.png "HubGenesPortaTSupPurple")
 ![REVIGOPortaTSupPurple](REVIGOPortaTSupPurple.png "REVIGOPortaTSupPurple")
 
 *2b. PortaTSupTan (13 overlapping genes)*
+
 ![ModuleTanPortaTSequiaPuaOvsGup](ModuleTanPortaTSequiaPuaOvsGup.png "ModuleTanPortaTSequiaPuaOvsGup")
 ![HubGenesPortaTSupTan](HubGenesPortaTSupTan.png "HubGenesPortaTSupTan")
 ![REVIGOPortaTSupTan](REVIGOPortaTSupTan.png "REVIGOPortaTSupTan")
 
 **3. PortaTCSup**
+
 Individuos con porta tolerante, independientemente del tratamiento (analizamos juntos controles y sequías), también expresan genes diferentes en función de la púa (lo que es lógico teniendo en cuenta los dos resultados anteriores). Serían genes constitutivos. En concreto hemos encontrado genes upregulados en portas tolerantes con púa Oria en comparación con púa Galicia. 
 
 *3a.PortaTCSupGreen (6 overlapping genes)*
+
 ![ModuleGreenPortaTControlSequiaPuaOriavsGaliciaup](ModuleGreenPortaTControlSequiaPuaOriavsGaliciaup.png "ModuleGreenPortaTControlSequiaPuaOriavsGaliciaup")
 ![HubGenesPortaTCSupGreen](HubGenesPortaTCSupGreen.png "HubGenesPortaTCSupGreen")
 ![REVIGOPortaTCSupGreen](REVIGOPortaTCSupGreen.png "REVIGOPortaTCSupGreen")
@@ -482,14 +490,19 @@ Individuos con porta tolerante, independientemente del tratamiento (analizamos j
 **1. Cuando la púa es Oria en portas sometidos a sequia**
 
 *1a. PuaOSupBlack (24 overlapping genes)*
+
 Es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en individuos con púa oria y sometidos a sequía
+
 ![ModuleBlackPuaOriaSequiaPortaTvsSup](ModuleBlackPuaOriaSequiaPortaTvsSup.png "ModuleBlackPuaOriaSequiaPortaTvsSup")
 ![HubGenesPuaOSupBlack](HubGenesPuaOSupBlack.png "HubGenesPuaOSupBlack")
 ![REVIGOPuaOSupBlack](REVIGOPuaOSupBlack.png "REVIGOPuaOSupBlack")
 
 **2. Cuando la púa es Galicia en portas bien regados (controles)**
+
 *2a. PuaGCupTan (55 overlapping genes)*
+
 Es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en individuos con púa Galicia no sometidos a sequía
+
 ![ModuleTanPuaGControlPortaTvsSup](ModuleTanPuaGControlPortaTvsSup.png "ModuleTanPuaGControlPortaTvsSup")
 ![HubGenesPuaGCupTan](HubGenesPuaGCupTan.png "HubGenesPuaGCupTan")
 ![REVIGOPuaGCupTan](REVIGOPuaGCupTan.png "REVIGOPuaGCupTan")
