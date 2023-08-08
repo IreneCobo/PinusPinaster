@@ -512,8 +512,11 @@ Es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en
 ![REVIGOPuaGCupTan](REVIGOPuaGCupTan.png "REVIGOPuaGCupTan")
 
 
+## Parte 2: DE analysis con otro diseño experimental (más complejo)
 
+Como con este diseño experimental más simple no hemos obtenido muchos módulos de interés, probamos con un diseño experimental más complejo en el que se tenga en cuenta en conjunto, tratamiento, púa y porta y su interacción (utilizo el mismo diseño que han utilizado Myriam y Lorenzo en hoja y tallo, respectivamente)
 
+Tabla con los resultados del DE analysis con DEseq 
 
 
 
