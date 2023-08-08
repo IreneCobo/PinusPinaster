@@ -428,15 +428,19 @@ Resultados:
 - Module Green (6 overlapping genes)
 
 **Efecto del porta (tolerante vs sensible) cuando la púa es oria en sequia**
+
 4. PuaOSupBlack, 24 overlapping genes (es decir, entramos genes upregulados en los portas tolerantes vs los sensibles en individuos con púa oria y sometidos a sequía)
 
 **Efecto del porta (tolerante vs sensible) cuando la púa es Galicia en control**
+
 5. PuaGCupTan, 55 overlapping genes (es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en individuos con púa Galicia no sometidos a sequía)
 
 ### 4. Cytoescape with CytoHubba app (10 top ranked hub genes based on their connection degree)
+
 Finalmente se utilizó el programa *Cytoescape* para visualizar las redes de co-expresión de los siete módulos de interés. La aplicación *cytohubba* se utilizó para identificar los "hub genes" dentro de cada módulo (top 10 ranked hub genes) según su grado de conectividad con otros genes. 
 
 ### 5. GO enrichment analysis
+
 Finalmente se realizó un GO enrichment analysis en los 7 módulos seleccionados utilizando el paquete de R GOseq para y los resultados de la última anotación funcional del transcriptoma de *P. pinaster* utilizando el programa **OmicsBox** (fecha 6 de marzo de 2023). Los resultados del GO enrichment se visualizaron usando el programa online REVIGO (en concreto se visualizaron los GO terms de biological process). 
 
 **Resultados: Heatmaps de los 7 módulos, hub genes visualizados e identificados en Cytoescape y cytohubba y visualización del GO enrichment analysis en REVIGO (biological proccess)**
