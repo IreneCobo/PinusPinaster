@@ -353,8 +353,10 @@ summary(resPortaTreatmentTvsS)#No DE genes
 
 ![EfectoPortaPuaGalicia](EfectoPortaPuaGalicia.png "EfectoPortaPuaGalicia")
 ![PCAGaliciaTvsSsolosequia](PCAGaliciaTvsSsolosequia.png "PCAGaliciaTvsSsolosequia")
+![PCAEfectoPortaControlGalicia](PCAEfectoPortaControlGalicia.png "PCAEfectoPortaControlGalicia")
 ![PCA_EfectoPorta_PúaOria](PCA_EfectoPorta_PúaOria.png "PCA_EfectoPorta_PúaOria")
 ![EfectoPortaPuaOriaSequia](EfectoPortaPuaOriaSequia.png "EfectoPortaPuaOriaSequia")
+![PCAEfectoPortaPuaOriaControl](PCAEfectoPortaPuaOriaControl.png "PCAEfectoPortaPuaOriaControl")
 
 | **EFECTO DE LA PÚA (ORIA vs GALICIA)** | -- | -- | -- | -- | -- | -- |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
@@ -379,16 +381,83 @@ summary(resPortaTreatmentTvsS)#No DE genes
 
 ![PCAEfectoPuaOvsGPortaSensible](PCAEfectoPuaOvsGPortaSensible.png "PCAEfectoPuaOvsGPortaSensible")
 ![PCA_EfectoPuaOvsGPortaSensibleSoloSequia](PCA_EfectoPuaOvsGPortaSensibleSoloSequia.png "PCA_EfectoPuaOvsGPortaSensibleSoloSequia")
+![PCAEfectoPuaPortaSensibleControl](PCAEfectoPuaPortaSensibleControl.png "PCAEfectoPuaPortaSensibleControl")
 ![PCA_EfectoPuaOvsGPortaTolerante](PCA_EfectoPuaOvsGPortaTolerante.png "PCA_EfectoPuaOvsGPortaTolerante")
 ![PCA_EfectoPuaOriavsGaliciaPortaToleranteSequia](PCA_EfectoPuaOriavsGaliciaPortaToleranteSequia.png "PCA_EfectoPuaOriavsGaliciaPortaToleranteSequia")
+![PCAEfectoPuaPortaToleranteControl](PCAEfectoPuaPortaToleranteControl.png "PCAEfectoPuaPortaToleranteControl")
 
-### Re-anotación funcional del transcriptoma de referencia (Pinus pinaster): En proceso
+### 3. WGCNA
+
+El siguiente paso fue realizar un análisis con el programa [WGCNA](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/index.html). Este programa realiza **redes de co-expresión de genes**. De este modo, identifica **grupos de genes con perfil de co-expresión similar (llamados módulos)**. La utilidad de este análisis es que los genes con co-expresión similar muy **probablermente regulan las mismas rutas metabólicas**. Además, dentro de estos módulos, es posible identificar los llamados **"hub genes"** (que son genes dentro de cada módulo que tienen una alta conectividad con otros genes, es decir, que **su expresión influye en la expresión de más genes**, por lo tanto, también son candidatos a tener alta importancia en la red, como potenciales factores de transcripción por ejemplo). De las distintas opciones (tutoriales), utilizamos la step-by-step, ya que permite modificar y adaptar los parámetros a nuestros datos. Seguimos el tutorial tal cual con dos modificaciones:
+- **Utilizamos únicamente los genes con alta varianza (3er cuartil)** de todos nuestros transcritos obtenidos como output del programa Salmon. Originalmente había 206574 contigs. Después empleamos el mismo filtro para considerar un gen diferencialmente expresado que utilizamos para el DE analysis con DESeq2 (Nos quedamos con aquellos que tengan más de 10 counts en al menos 3 individuos). Como resultado de este filtro, quedaron 49801 contigs. Se normalizaron con el comando voom del paquete de R limma. Finalmente se filtraron los genes con más varianza de estos 49801 contigs porque si se usaban todos ellos, el programa colapsaba. Tras el filtro, retuvimos 12450 contigs con alta varianza (3er cuartil) que son los que usamos para correr el programa WGCNA
+- La "adjacency" de la red de co-expresión, que por defecto es "unsigned" fue modificada para ser "signed". Cuando la adjacency es unsigned, se buscan altas correlaciones en valor absoluto, mientras que la "signed" sí tiene en cuenta el signo, lo que tiene más sentido para la pregunta que queremos responder (buscamos genes cuya expresión esté correlacionada en la misma dirección y sentido, es decir, que cuando uno aumente su expresión el otro aumente y al revés).
+
+Resultados:
+
+1. Dendrograma como análisis exploratorio de datos. El dendrograma agrupó los individuos según el porta tolerante vs sensible (salvo dos outliers). Es esperable, ya que estamos analizando muestras de raíz.
+
+[ClusterDendrogram](ClusterDendrogram.png "ClusterDendrogram")
+
+2. Soft threshold power = 4
+
+[SoftThersholdPowerSelectionMedium](SoftThersholdPowerSelectionMedium.png "SoftThersholdPowerSelectionMedium")
+
+3. Obtuvimos 12 módulos con genes altamente correlacionados en cuanto a su expresión, tanto en dirección como en sentido (signed). En un principio obtuvimos 14, pero después se juntaron aquellos que tenían un perfil de expresión similar (merge) quedando finalmente 12. 
+
+[Clusterinofmoduleeigengenes](Clusterinofmoduleeigengenes.png "Clusterinofmoduleeigengenes") 
+
+[ClusterDendrogramWithModulesandMergedStepbyStep](ClusterDendrogramWithModulesandMergedStepbyStep.png "ClusterDendrogramWithModulesandMergedStepbyStep")
+
+4. Una vez obtenidos los doce módulos, se hizo una overlapping table con los DE genes de las diferentes comparativas y los módulos para obtener qué módulos están enriquecidos en DE genes. La significancia (p-valor) se calculó con un Test de Fisher. Los resultados se plotearon en un heatmap (el color rojo indica el p-valor, a menor p-valor, más intenso el color, y también se indica el número de overlapping genes entre los DE genes de las distintas comparativas y los módulos)
+
+[OverlappingTableTodaslasComparativas](OverlappingTableTodaslasComparativas.png "OverlappingTableTodaslasComparativas")
+
+5. Los módulos signficativos (p-valor < 0.05) se plotearon en heatmaps para ver si mostraban un perfil de expresión de interés. 5 comparativas mostraron un perfil de expresión de interés (módulos black, tan, purple y green)
+
+**Efecto de la púa en el porta tolerante**
+
+1. PortaTCdown. (es decir individuos sometidos a tratamiento control, porta tolerante en todos y comparando pua oria vs galicia, genes downregulados en la oria, o upregulados en galicia). Es decir, la púa afecta a la expresión de los genes de los portas tolerantes no sometido a estrés hídrico, siendo distinta en pua de oria vs Galicia
+- Module black, 12 overlapping genes
+- Module Tan (39 overlapping genes)
+
+2. PortaTSup (es decir, individuos sometidos a sequía, porta tolerante también en todos y comparando pua oria vs galicia, genes upregulados en la púa oria). Es decir, la púa afecta a la expresión de los genes de los portas tolerantes sometidos a estrés hídrico por efecto de la púa oria vs Galicia. 
+- Module Purple (16 overlapping genes)
+- Module Tan (13 overlapping genes)
+
+3. PortaTCSup (es decir, individuos con porta tolerante, independientemente del tratamiento, también expresan genes diferentes en función de la púa, lo que es lógico teniendo en cuenta los dos resultados anteriores, en concreto hemos encontrado genes upregulados en púa oria vs galicia). 
+- Module Green (6 overlapping genes)
+
+**Efecto del porta (tolerante vs sensible) cuando la púa es oria en sequia**
+4. PuaOSupBlack, 24 overlapping genes (es decir, entramos genes upregulados en los portas tolerantes vs los sensibles en individuos con púa oria y sometidos a sequía)
+
+**Efecto del porta (tolerante vs sensible) cuando la púa es Galicia en control**
+5. PuaGCupTan, 55 overlapping genes (es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en individuos con púa Galicia no sometidos a sequía)
+
+### 4. Cytoescape with CytoHubba app (10 top ranked hub genes based on their connection degree)
+Finalmente se utilizó el programa *Cytoescape* para visualizar las redes de co-expresión de los siete módulos de interés. La aplicación *cytohubba* se utilizó para identificar los "hub genes" dentro de cada módulo (top 10 ranked hub genes) según su grado de conectividad con otros genes. 
+
+### 5. GO enrichment analysis
+Finalmente se realizó un GO enrichment analysis en los 7 módulos seleccionados utilizando el paquete de R GOseq para y los resultados de la última anotación funcional del transcriptoma de *P. pinaster* utilizando el programa **OmicsBox** (fecha 6 de marzo de 2023). Los resultados del GO enrichment se visualizaron usando el programa online REVIGO (en concreto se visualizaron los GO terms de biological process). 
+
+**Resultados: Heatmaps de los módulos, hub genes visualizados e identificados en Cytoescape y cytohubba y visualización del GO enrichment analysis en REVIGO (biological proccess)**
 
 
-- Poner etiquetas con los nombres de los individuos en los PCA
-- Normalizar con todas las muestras
-- Comparar los controles entre ellos
-- Efecto del tratamiento (es decir, sequía vs control en las mismas construcciones)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
