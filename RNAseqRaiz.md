@@ -516,7 +516,44 @@ Es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en
 
 Como con este diseño experimental más simple no hemos obtenido muchos módulos de interés, probamos con un diseño experimental más complejo en el que se tenga en cuenta en conjunto, tratamiento, púa y porta y su interacción (utilizo el mismo diseño que han utilizado Myriam y Lorenzo en hoja y tallo, respectivamente)
 
-Tabla con los resultados del DE analysis con DEseq 
+Tablas con los resultados del DE analysis con DEseq2
+
+| **COMPARATIVA 2: EFECTO DEL PORTA (Tolerante vs Sensible)** | -- | -- | -- | -- | -- | -- |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| **Diseño: Treat.pua+Porta+Treat.pua:Porta** | -- | -- | -- | -- | -- | -- |
+| **Comparación** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC >= 1.5 (up)** | **LFC <= 1.5 (down)** | **outliers** | **low counts** |
+| *Porta_T_vs_S* Interpretación: Comparación entre individuos con porta tolerante y porta sensible independientemente del tratamiento y la púa | 83131 | < 0.05 | 211, 0.25% | 143, 0.17% | 252, 0.3% | 41805, 50% |
+| *Porta_T_vs_S, Treat.puaCO.PortaT* Interpretación: El efecto extra el porta tolerante en los individuos con púa Oria y tratamiento control, o lo que es lo mismo, ¿es el efecto del porta tolerante diferente entre las distintas combinaciones de tratamiento+pua? | 83131 | < 0.05 | 16, 0.018% (LFC > 0) | 16, 0.018% (LFC < 0) | 252, 0.3 | 6447, 7.8% |
+| *Porta_T_vs_S, Treat.puaSG.PortaT* Interpretación: El efecto extra del porta tolerante en los individuos con púa Galicia y tratamiento control | 83131 | < 0.05 | 431, 0.51% | 360, 0.5% | 252, 0.3% | 37001, 45% |
+| *Porta_T_vs_S, Treat.puaSO.PortaT* Interpretación: El efecto extra del porta tolerante en los individuos con púa Oria y tratamiento sequía | 83131 | < 0.05 | 52, 0.063% | 37, 0.045% | 252, 0.3% | 33810, 41% |
+
+| **COMPARATIVA 3: EFECTO DE LA PÚA (Oria vs Galicia)** | -- | -- | -- | -- | -- | -- |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| **Diseño: Treat.porta + Pua + Treat.porta:Pua** | -- | -- | -- | -- | -- | -- |
+| **Comparación** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC >=1.5 (up)** | **LFC <= 1.5 (down)** | **outliers** | **low counts** |
+| *Pua_O_vs_G* Interpretación: Comparación individuos con púa oria vs galicia independientemente del tratamiento y el porta| 83131 | < 0.05 | 162, 0.19% | 32, 0.038% | 252, 0.3% | 41805, 50% |
+| *Pua_O_vs_G, Treat.portaCT.PuaO* Interpretación: El efecto extra de la púa oria en los individuos con porta tolerante y tratamiento control | 83131 | < 0.05 | 60, 0.072% | 24, 0.029% | 252, 0.3% | 33810, 41% |
+| *Pua_O_vs_G, Treat.portaSS.PuaO* Interpretación: El efecto extra de la púa oria en los individuos con porta sensible y tratamiento sequía | 83131 | < 0.05 | 16, 0.019% | 63, 0.076% | 252, 0.3% | 38607, 46% |
+| *Pua_O_vs_G, Treat.portaST.PuaO* Interpretación: El efecto extra de la púa oria en los individuos con porta tolerante y tratamiento sequía | 83131  | < 0.05 | 41, 0.049% | 56, 0.067% | 252, 0.3% | 25780, 31% |
+
+| **COMPARATIVA 4: EFECTO DEL TRATAMIENTO (Sequía vs Control)** | -- | -- | -- | -- | -- | -- |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| **Diseño: Construccion + Treatment + Construccion:Treatment** | -- | -- | -- | -- | -- | -- |
+| **Comparación** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Treatment_S_vs_C* Interpretación: Comparación de individuos con tratamiento sequía vs control independientemente de la púa o porta | 83131 | < 0.05 | 85, 0.1% | 5, 0.006% | 252, 0.3% | 33810, 41% |
+| *Treatment_S_vs_C, ConstruccionTG.TreatmentS* Interpretación: El efecto extra del tratamiento de sequía en los individuos con porta tolerante y púa galicia | 83131 | < 0.05 | 110, 0.13% | 73, 0.088% | 252, 0.3% | 37001, 45% |
+| *Treatment_S_vs_C, ConstruccionSO.TreatmentS* Interpretación: El efecto extra del tratamiento de sequía en los individuos con porta sensible y púa oria | 83131 | < 0.05 | 3, 0.0036% | 86, 0.1% | 252, 0.3% | 24170, 29% |
+| *Treatment_S_vs_C, ConstruccionTO.TreatmentS* Interpretación: El efecto extra del tratamiento de sequía en los individuos con porta tolerante y púa oria | 83131 | < 0.05 | 17, 0.02% | 57, 0.069% | 252, 0.3% | 30605, 37% |
+   
+| **COMPARATIVA 5: EFECTO DE LA CONSTRUCCIÓN (PORTA+PÚA)** | -- | -- | -- | -- | -- | -- |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| **Diseño: ~ Construccion** | -- | -- | -- | -- | -- | -- |
+| **Comparación** | **Number of reads with nonzero total read count** | **adjusted p-value** | **LFC > 0 (up)** | **LFC < 0 (down)** | **outliers** | **low counts** |
+| *Construccion_TG_vs_SG* Interpretación: Comparación de individuos de porta tolerante vs sensible con púa galicia independientemente del tratamiento | 83131 | < 0.05 | 1112, 1.3% | 851, 1% | 456, 0.55% | 20871, 25% |
+| *Construccion_OS_vs_GS, Construccion_OT_vs_GS* Interpretación: Comparación de individuos OT vs OS, es decir, de porta tolerante vs sensible con púa oria independientemente del tratamiento | 83131 | < 0.05 | 71, 0.085% | 13, 0.016% | 456, 0.55% | 32034, 39% |
+| *Construccion_SO_vs_SG* Interpretación: Comparación de individuos con púa Oria vs Galicia y porta sensible, independientemente del tratamiento | 83131 | < 0.05 | 24, 0.029% | 8, 0.0096% | 456, 0.55% | 27238, 33% |
+| *Construccion_TO_vs_SG, "Construccion_TG_vs_SG* Interpretación: Comparación de individuos TO vs TG, es decir, púa oria vs galicia con porta tolerante, independientemente del tratamiento | 83131 | < 0.05 | 578, 0.7% | 235, 0.28% | 456, 0.55% | 27238, 33% |
+
 
 
 
