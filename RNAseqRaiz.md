@@ -516,7 +516,7 @@ Es decir, encontramos genes upregulados en portas tolerantes vs los sensibles en
 
 Como con este diseño experimental más simple no hemos obtenido muchos módulos de interés, probamos con un diseño experimental más complejo en el que se tenga en cuenta en conjunto, tratamiento, púa y porta y su interacción (utilizo el mismo diseño que han utilizado Myriam y Lorenzo en hoja y tallo, respectivamente)
 
-Tablas con los resultados del DE analysis con DEseq2
+### Tablas con los resultados del DE analysis con DEseq2
 
 | **COMPARATIVA 2: EFECTO DEL PORTA (Tolerante vs Sensible)** | -- | -- | -- | -- | -- | -- |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
@@ -554,7 +554,15 @@ Tablas con los resultados del DE analysis con DEseq2
 | *Construccion_SO_vs_SG* Interpretación: Comparación de individuos con púa Oria vs Galicia y porta sensible, independientemente del tratamiento | 83131 | < 0.05 | 24, 0.029% | 8, 0.0096% | 456, 0.55% | 27238, 33% |
 | *Construccion_TO_vs_SG, "Construccion_TG_vs_SG* Interpretación: Comparación de individuos TO vs TG, es decir, púa oria vs galicia con porta tolerante, independientemente del tratamiento | 83131 | < 0.05 | 578, 0.7% | 235, 0.28% | 456, 0.55% | 27238, 33% |
 
+### Overlapping table
 
+De nuevo, se realizó una overlapping table entre los DE genes de las distintas comparativas y los 12 módulos obtenidos en WGCNA
+
+Como las comparativas no se ven bien en la overlapping table, las pongo aquí en orden de izquierda a derecha:
+
+PortaTvsSupTreat.PuaCG, PortaTvsSdownTreat.PuaCG, PortaTvsSTreat.PuaCOup, PortaTvsSTreat.PuaCOdown, PortaTvsSTreat.PuaSGup, PortaTvsSTreat.PuaSGdown, PortaTvsSTreat.PuaSOup, PortaTvsSTreat.PuaSOdown, PuaOvsGTreat.PortaCSup, PuaOvsGTreat.PortaCSdown, PuaOvsGTreat.PortaCTup, PuaOvsGTreat.PortaCTdown, PuaOvsGTreat.PortaSSup, PuaOvsGTreat.PortaSSdown, PuaOvsGTreat.PortaSTup, PuaOvsGTreat.PortaSTdown, TreatSvsCpuaGportaSup, TreatSvsCpuaGportaSdown, TreatSvsCpuaGportaTup, TreatSvsCpuaGportaTdown, TreatSvsCpuaOportaSup, TreatSvsCpuaOportaSdown, TreatSvsCpuaOportaTup, TreatSvsCpuaOportaTdown, ConstSOvsSGup, ConstSOvsSGdown, ConstTGvsSGup, ConstTGvsSGdown, ConstTOvsSOup, ConstTOvsSOdown, ConstTOvsTGup, ConstTOvsTGdown
+
+![OverlapTableSmall](OverlapTableSmall.png "OverlapTableSmall")
 
 
 
