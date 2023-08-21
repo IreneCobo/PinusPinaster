@@ -564,6 +564,20 @@ PortaTvsSupTreat.PuaCG, PortaTvsSdownTreat.PuaCG, PortaTvsSTreat.PuaCOup, PortaT
 
 ![OverlapTableSmall](OverlapTableSmall.png "OverlapTableSmall")
 
+**Comparativas significativas en la overlaping table por cada módulo**
+
+Module Blue: 
+- PortaTvsSTreat.PuaCOup
+- PortaTvsSTreat.PuaCOdown
+- PortaTvsSTreat.PuaSOdown
+- PuaOvsGTreat.PortaCTdown
+- PuaOvsGTreat.PortaSTdown Este sí parece bien 
+- TreatSvsCpuaOportaSup
+- ConstSOvsSGdown
+- ConstTOvsSOdown
+
+
+
 
 
 
