@@ -571,7 +571,7 @@ Module Blue:
 - PortaTvsSTreat.PuaCOdown
 - PortaTvsSTreat.PuaSOdown
 - PuaOvsGTreat.PortaCTdown
-- PuaOvsGTreat.PortaSTdown Este sí parece bien 
+- PuaOvsGTreat.PortaSTdown (el único heatmap que muestra un perfil de expresión esperado, 40 overlapping genes) 
 - TreatSvsCpuaOportaSup
 - ConstSOvsSGdown
 - ConstTOvsSOdown
