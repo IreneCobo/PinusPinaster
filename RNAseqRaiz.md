@@ -554,7 +554,7 @@ Como con este diseño experimental más simple no hemos obtenido muchos módulos
 | *Construccion_SO_vs_SG* Interpretación: Comparación de individuos con púa Oria vs Galicia y porta sensible, independientemente del tratamiento | 83131 | < 0.05 | 24, 0.029% | 8, 0.0096% | 456, 0.55% | 27238, 33% |
 | *Construccion_TO_vs_SG, "Construccion_TG_vs_SG* Interpretación: Comparación de individuos TO vs TG, es decir, púa oria vs galicia con porta tolerante, independientemente del tratamiento | 83131 | < 0.05 | 578, 0.7% | 235, 0.28% | 456, 0.55% | 27238, 33% |
 
-### 2.2. Overlapping table
+### 2.2 Overlapping table
 
 De nuevo, se realizó una overlapping table entre los DE genes de las distintas comparativas y los 12 módulos obtenidos en WGCNA
 
