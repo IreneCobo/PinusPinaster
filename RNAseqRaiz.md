@@ -576,6 +576,31 @@ Module Blue:
 - ConstSOvsSGdown
 - ConstTOvsSOdown
 
+Module Brown
+- PortaTvsSupTreat.PuaCG
+- PortaTvsSdownTreat.PuaCG
+- PortaTvsSTreat.PuaCOdown
+- PortaTvsSTreat.PuaSGdown
+- PortaTvsSTreat.PuaSOup
+- PuaOvsGTreat.PortaCSup, 
+- PuaOvsGTreat.PortaCSdown, 
+- PuaOvsGTreat.PortaCTup
+- PuaOvsGTreat.PortaSSdown, 
+- PuaOvsGTreat.PortaSTup
+- TreatSvsCpuaGportaSup
+- TreatSvsCpuaGportaTup, 
+- TreatSvsCpuaGportaTdown, 
+- TreatSvsCpuaOportaSup, 
+- TreatSvsCpuaOportaSdown, 
+- TreatSvsCpuaOportaTup
+- ConstSOvsSGup
+- ConstTGvsSGup, 
+- ConstTGvsSGdown,
+- ConstTOvsTGup, 
+- ConstTOvsTGdown
+
+Module Cyan
+
 
 
 
