@@ -577,27 +577,24 @@ Module Blue:
 - ConstTOvsSOdown
 
 Module Brown
-- PortaTvsSupTreat.PuaCG
-- PortaTvsSdownTreat.PuaCG
-- PortaTvsSTreat.PuaCOdown
-- PortaTvsSTreat.PuaSGdown
-- PortaTvsSTreat.PuaSOup
+- Porta T vs S en general, algo se ve, un corte entre ambos, podría ser
+- PortaTvsSupTreat.PuaCG, PortaTvsSdownTreat.PuaCG (algo se ve, podría ser)
+- PortaTvsSTreat.PuaCOdown (lo mismo, algo se ve)
+- PortaTvsSTreat.PuaSGdown (lo mismo, algo se ver)
+- PortaTvsSTreat.PuaSOup (lo mismo, un corte se ve)
 - PuaOvsGTreat.PortaCSup, 
 - PuaOvsGTreat.PortaCSdown, 
 - PuaOvsGTreat.PortaCTup
 - PuaOvsGTreat.PortaSSdown, 
 - PuaOvsGTreat.PortaSTup
 - TreatSvsCpuaGportaSup
-- TreatSvsCpuaGportaTup, 
-- TreatSvsCpuaGportaTdown, 
+- TreatSvsCpuaGportaTup, TreatSvsCpuaGportaTdown (algún corte se ve, muy sutil)
 - TreatSvsCpuaOportaSup, 
 - TreatSvsCpuaOportaSdown, 
 - TreatSvsCpuaOportaTup
 - ConstSOvsSGup
-- ConstTGvsSGup, 
-- ConstTGvsSGdown,
-- ConstTOvsTGup, 
-- ConstTOvsTGdown
+- ConstTGvsSGup, ConstTGvsSGdown (algún cambio se ve, podría ser)
+- ConstTOvsTGup, ConstTOvsTGdown (lo mismo, algo se ve, podría ser)
 
 Module Cyan
 - PortaTvsSTreat.PuaSGdown
@@ -607,6 +604,15 @@ Module Cyan
 - ConstSOvsSGdown
 
 Module Green
+- PortaTvsSTreat.PuaCOdown
+- TreatSvsCpuaGportaSdown
+- TreatSvsCpuaGportaTdown
+- TreatSvsCpuaOportaTup
+- ConstSOvsSGup
+
+Module Greenyellow
+
+
 
 
 
