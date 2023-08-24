@@ -621,6 +621,45 @@ Module Greenyellow
 - ConstSOvsSGup
 - ConstTOvsTGdown
 
+Module Magenta
+- ConstTGvsSGup (se ve algo, genes downregulados en individuos con púa Galicia y tratamiento de sequía con porta tolerante frente al resto de individuos con púa Galicia (pero que tienen o bien porta tolerante y tratamiento control o porta sensible y tratamiento control o sequía, aunque estos últimos un poco más downregulados también)
+- ConstTOvsSOup
+- ConstTOvsTGup
+
+Module Purple
+- PortaTvsSTreat.PuaSGup
+- ConstTOvsTGup (tiene buena pinta, pero se ven diferencias de expresión en los individuos con pua Galicia y tratamiento sequía (genes downregulados) frente a los púa oria independientemente del tratamiento y púa Galicia con tratamiento control). Todos tienen porta tolerante
+
+Module red
+- PortaTvsSupTreat.PuaCG
+- PortaTvsSTreat.PuaSGup
+- PortaTvsSTreat.PuaSOup
+- PuaOvsGTreat.PortaCTdown
+- TreatSvsCpuaOportaTup
+- ConstTGvsSGup
+- ConstTOvsTGup
+
+Module salmon
+- PortaTvsSupTreat.PuaCG
+- PuaOvsGTreat.PortaCSup
+- PuaOvsGTreat.PortaSTdown
+- TreatSvsCpuaGportaSup
+
+Module yellow
+- PortaTvsSTreat.PuaSGup, PortaTvsSTreat.PuaSGdown
+- PortaTvsSTreat.PuaSOdown
+- PuaOvsGTreat.PortaCSup, PuaOvsGTreat.PortaCSdown
+- PuaOvsGTreat.PortaSSup
+- PuaOvsGTreat.PortaSTdown
+- TreatSvsCpuaGportaSdown,
+- TreatSvsCpuaGportaTup, TreatSvsCpuaGportaTdown
+- TreatSvsCpuaOportaTup, TreatSvsCpuaOportaTdown
+- ConstSOvsSGup
+- ConstTGvsSGup
+- ConstTOvsSOup, ConstTOvsSOdown,
+- ConstTOvsTGup
+
+
 
 
 
