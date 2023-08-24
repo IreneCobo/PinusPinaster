@@ -659,6 +659,10 @@ Module yellow
 - ConstTOvsSOup, ConstTOvsSOdown,
 - ConstTOvsTGup
 
+No veo que ningún módulo muestre un patrón de expresión de interés (algunos parece que sí, pero no está muy claro y no creo que sea publicable)
+
+Pruebo a hacer heatmaps directamente de los genes diferencialmente expresados de cada comparativa a ver qué pinta tienen (algunos tenían pocos genes)
+
 
 
 
