@@ -663,6 +663,38 @@ No veo que ningún módulo muestre un patrón de expresión de interés (algunos
 
 Pruebo a hacer heatmaps directamente de los genes diferencialmente expresados de cada comparativa a ver qué pinta tienen (algunos tenían pocos genes)
 
+### Comparativas en las que los heatmaps muestran el patrón de expresión esperado
+
+**Comparativa 2-Efecto del porta**
+*Porta TvsS Treat.PuaCG*
+- up (162 genes con alta varianza de 211 genes)
+![Heatmap DEgenes PortaTvsS Treat.PuaCGup alta varianza](HeatmapDEgenesPortaTvsSTreat.PuaCGupaltavarianza.png "Heatmap DEgenes PortaTvsS Treat.PuaCGup alta varianza")
+- down (114 genes con alta varianza de 143 genes)
+![Heatmap DEgenes PortaTvsS Treat.PuaCGdown alta varianza](HeatmapDEgenesPortaTvsSTreat.PuaCGdownaltavarianza.png "Heatmap DEgenes PortaTvsS Treat.PuaCGdown alta varianza")
+
+*Porta TvsS Treat.PuaCO*
+- up (1 gen)
+![Heatmap DEgenes PortaTvsS Treat.PuaCOup alta varianza](HeatmapDEgenesPortaTvsSTreat.PuaCOupaltavarianza.png "Heatmap DEgenes PortaTvsS Treat.PuaCOup alta varianza")
+- down (14 genes con alta varianza de 15)
+![HeatmapDEgenesPortaTvsSTreat.PuaCOdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaCOdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaCOdownaltavarianza")
+
+*Porta TvsS Treat.PuaSG*
+- up
+![HeatmapDEgenesPortaTvsSTreat.PuaSGupaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSGupaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSGupaltavarianza")
+down
+- down
+![HeatmapDEgenesPortaTvsSTreat.PuaSGdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSGdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSGdownaltavarianza")
+
+*Porta TvsS Treat.PuaSO*
+- up
+![HeatmapDEgenesPortaTvsSTreat.PuaSOupaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSOupaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSOupaltavarianza")
+- down
+![HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza")
+
+Comparativa 3-Efecto de la púa: No parece que la púa afecte a la expresión genética de las raíces
+
+
+
 
 
 
