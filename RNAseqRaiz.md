@@ -672,34 +672,36 @@ Pruebo a hacer heatmaps directamente de los genes diferencialmente expresados de
 ![Heatmap DEgenes PortaTvsS Treat.PuaCGup alta varianza](HeatmapDEgenesPortaTvsSTreat.PuaCGupaltavarianza.png "Heatmap DEgenes PortaTvsS Treat.PuaCGup alta varianza")
 
 - down (114 genes con alta varianza de 143 genes)
+
 ![Heatmap DEgenes PortaTvsS Treat.PuaCGdown alta varianza](HeatmapDEgenesPortaTvsSTreat.PuaCGdownaltavarianza.png "Heatmap DEgenes PortaTvsS Treat.PuaCGdown alta varianza")
 
 *Porta TvsS Treat.PuaCO*
 
 - up (1 gen)
+
 ![Heatmap DEgenes PortaTvsS Treat.PuaCOup alta varianza](HeatmapDEgenesPortaTvsSTreat.PuaCOupaltavarianza.png "Heatmap DEgenes PortaTvsS Treat.PuaCOup alta varianza")
 
 - down (14 genes con alta varianza de 15)
-- 
+
 ![HeatmapDEgenesPortaTvsSTreat.PuaCOdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaCOdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaCOdownaltavarianza")
 
 *Porta TvsS Treat.PuaSG*
 
-- up
+- up (213 genes con alta varianza de 504)
 
 ![HeatmapDEgenesPortaTvsSTreat.PuaSGupaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSGupaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSGupaltavarianza")
 
-- down
+- down (248 genes con alta varianza de 449)
 
 ![HeatmapDEgenesPortaTvsSTreat.PuaSGdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSGdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSGdownaltavarianza")
 
 *Porta TvsS Treat.PuaSO*
 
-- up
+- up (48 genes con alta varianza de 52)
 
 ![HeatmapDEgenesPortaTvsSTreat.PuaSOupaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSOupaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSOupaltavarianza")
 
-- down
+- down (33 genes con alta varianza de 37)
 
 ![HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza")
 
