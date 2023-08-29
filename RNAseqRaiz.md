@@ -691,7 +691,135 @@ down
 - down
 ![HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza](HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza.png "HeatmapDEgenesPortaTvsSTreat.PuaSOdownaltavarianza")
 
-Comparativa 3-Efecto de la púa: No parece que la púa afecte a la expresión genética de las raíces
+**Comparativa 3-Efecto de la púa: No parece que la púa afecte a la expresión genética de las raíces**
+
+*Pua OvsG Treat.PortaCS*
+
+- up (140 genes con alta varianza de 160)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaCSupaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaCSupaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaCSupaltavarianza")
+
+- down (19 genes con alta varianza de 32)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaCSdownaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaCSdownaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaCSdownaltavarianza")
+
+*Pua OvsG Treat.PortaCT*
+
+- up (58 genes con alta varianza de 60)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaCTupaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaCTupaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaCTupaltavarianza")
+
+- down (22 genes con alta varianza de 24)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaCTdownaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaCTdownaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaCTdownaltavarianza")
+
+*Pua OvsG Treat.PortaSS*
+
+- up (12 genes con alta varianza de 16)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaSSupaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaSSupaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaSSupaltavarianza")
+
+- down (59 genes con alta varianza de 63)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaSSdownaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaSSdownaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaSSdownaltavarianza")
+
+*Pua OvsG Treat.PortaST*
+
+- up (40 genes con alta varianza de 41)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaSTupaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaSTupaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaSTupaltavarianza")
+
+- down (47 genes con alta varianza de 56)
+
+![HeatmapDEgenesPuaOvsGTreat.PortaSTdownaltavarianza](HeatmapDEgenesPuaOvsGTreat.PortaSTdownaltavarianza.png "HeatmapDEgenesPuaOvsGTreat.PortaSTdownaltavarianza")
+
+
+**Comparativa 4 - Efecto del tratamiento**
+
+*Treat SvsC puaGportaS*
+
+- up (85 genes con alta varianza de 85)
+
+![HeatmapDEgenesTreatSvsCpuaGportaSupaltavarianza](HeatmapDEgenesTreatSvsCpuaGportaSupaltavarianza.png "HeatmapDEgenesTreatSvsCpuaGportaSupaltavarianza")
+
+- down (5 genes con alta varianza de 5)
+
+![HeatmapDEgenesTreatSvsCpuaGportaSdownaltavarianza](HeatmapDEgenesTreatSvsCpuaGportaSdownaltavarianza.png "HeatmapDEgenesTreatSvsCpuaGportaSdownaltavarianza")
+
+*Treat SvsC puaGportaT*
+
+- up (73 genes con alta varianza de 110)
+
+![HeatmapDEgenesTreatSvsCpuaGportaTupaltavarianza](HeatmapDEgenesTreatSvsCpuaGportaTupaltavarianza.png "HeatmapDEgenesTreatSvsCpuaGportaTupaltavarianza")
+
+- down (53 genes con alta varianza de 73)
+
+![HeatmapDEgenesTreatSvsCpuaGportaTdownaltavarianza](HeatmapDEgenesTreatSvsCpuaGportaTdownaltavarianza.png "HeatmapDEgenesTreatSvsCpuaGportaTdownaltavarianza")
+
+*Treat SvsC puaOportaS*
+
+ up (3 genes con alta varianza de 3)
+
+![HeatmapDEgenesTreatSvsCpuaOportaSupaltavarianza](HeatmapDEgenesTreatSvsCpuaOportaSupaltavarianza.png "HeatmapDEgenesTreatSvsCpuaOportaSupaltavarianza")
+
+- down (85 genes con alta varianza de 86)
+
+![HeatmapDEgenesTreatSvsCpuaOportaSdownaltavarianza](HeatmapDEgenesTreatSvsCpuaOportaSdownaltavarianza.png "HeatmapDEgenesTreatSvsCpuaOportaSdownaltavarianza")
+
+*Treat SvsC puaOportaT*
+
+- up (14 genes con alta varianza de 17)
+
+![HeatmapDEgenesTreatSvsCpuaOportaTupaltavarianza](HeatmapDEgenesTreatSvsCpuaOportaTupaltavarianza.png "HeatmapDEgenesTreatSvsCpuaOportaTupaltavarianza")
+
+- down (49 genes con alta varianza de 57)
+
+![HeatmapDEgenesTreatSvsCpuaOportaTdownaltavarianza](HeatmapDEgenesTreatSvsCpuaOportaTdownaltavarianza.png "HeatmapDEgenesTreatSvsCpuaOportaTdownaltavarianza")
+
+
+**Comparativa 5 - Efecto de la construcción**
+
+*ConstSOvsSG*
+
+- up (18 genes con alta varianza de 24)
+
+![HeatmapDEgenesConstSOvsSGupaltavarianza](HeatmapDEgenesConstSOvsSGupaltavarianza.png "HeatmapDEgenesConstSOvsSGupaltavarianza")
+
+- down (6 genes con alta varianza de 8)
+
+![HeatmapDEgenesConstSOvsSGdownaltavarianza](HeatmapDEgenesConstSOvsSGdownaltavarianza.png "HeatmapDEgenesConstSOvsSGdownaltavarianza")
+
+*ConstTGvsSG*
+
+- up (493 genes con alta varianza de 1112)
+
+![HeatmapDEgenesConstTGvsSGupaltavarianza](HeatmapDEgenesConstTGvsSGupaltavarianza.png "HeatmapDEgenesConstTGvsSGupaltavarianza")
+
+- down (523 genes con alta varianza de 851)
+
+![HeatmapDEgenesConstTGvsSGdownaltavarianza](HeatmapDEgenesConstTGvsSGdownaltavarianza.png "HeatmapDEgenesConstTGvsSGdownaltavarianza")
+
+*ConstTOvsSO*
+
+- up (53 genes con alta varianza de 71)
+
+![HeatmapDEgenesConstTOvsSOupaltavarianza](HeatmapDEgenesConstTOvsSOupaltavarianza.png "HeatmapDEgenesConstTOvsSOupaltavarianza")
+
+- down (6 genes con alta varianza de 13)
+
+![HeatmapDEgenesConstTOvsSOdownaltavarianza](HeatmapDEgenesConstTOvsSOdownaltavarianza.png "HeatmapDEgenesConstTOvsSOdownaltavarianza")
+
+*ConstTOvsTG*
+
+- up (276 genes con alta varianza de 578)
+
+![HeatmapDEgenesConstTOvsTGupaltavarianza](HeatmapDEgenesConstTOvsTGupaltavarianza.png "HeatmapDEgenesConstTOvsTGupaltavarianza")
+
+- down (119 genes con alta varianza de 235)
+
+![HeatmapDEgenesConstTOvsTGdownaltavarianza](HeatmapDEgenesConstTOvsTGdownaltavarianza.png "HeatmapDEgenesConstTOvsTGdownaltavarianza")
+
+### WGCNA independiente para cada comparativa
 
 
 
