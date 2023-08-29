@@ -663,8 +663,6 @@ No veo que ningún módulo muestre un patrón de expresión de interés (algunos
 
 Pruebo a hacer heatmaps directamente de los genes diferencialmente expresados de cada comparativa a ver qué pinta tienen (algunos tenían pocos genes)
 
-### Comparativas en las que los heatmaps muestran el patrón de expresión esperado
-
 **Comparativa 2-Efecto del porta**
 
 *Porta TvsS Treat.PuaCG*
@@ -833,7 +831,10 @@ Pruebo a hacer heatmaps directamente de los genes diferencialmente expresados de
 
 ![HeatmapDEgenesConstTOvsTGdownaltavarianza](HeatmapDEgenesConstTOvsTGdownaltavarianza.png "HeatmapDEgenesConstTOvsTGdownaltavarianza")
 
+Algunos muestran un patrón de expresión esperado. Pruebo a cambiar la estrategia y a hacer ahora a posteriori un análisis WGCNA independiente para cada comparativa.
+
 ### WGCNA independiente para cada comparativa
+
 
 
 
