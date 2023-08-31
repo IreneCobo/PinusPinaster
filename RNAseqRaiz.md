@@ -833,7 +833,15 @@ Pruebo a hacer heatmaps directamente de los genes diferencialmente expresados de
 
 ![HeatmapDEgenesConstTOvsTGdownaltavarianza](HeatmapDEgenesConstTOvsTGdownaltavarianza.png "HeatmapDEgenesConstTOvsTGdownaltavarianza")
 
-Algunos muestran un patrón de expresión esperado. Pruebo a cambiar la estrategia y a hacer ahora a posteriori un análisis WGCNA independiente para cada comparativa.
+Algunos muestran un patrón de expresión esperado. 
+
+¿Qué se puede concluir?
+1. Como es lógico (ya que las muestras las hemos tomado de raíces) el porta es lo que más influye en la expresión. Los heatmaps con diferenciaciones más claras (en 3 de las 4 comparativas, en particular púa galicia, sobre todo con tratamiento control la que más, con sequía no tanto, y en púa oria solo en tratamiento sequía pero más sutil) se ven en la comparativa 2 (en las que se compara porta T vs S usando los mismos tratamientos y púas) y también cuando comparamos construcciones independientemente del tratamiento, en las que la púa es igual y lo que se comparan son los portas sensibles vs tolerantes (con púa galicia de nuevo muy claras, con púa oria no tanto).
+2. Sin embargo, la púa podría tener algún efecto en la expresión. Cuando se comparan púa oria vs galicia en las distintas combinaciones de porta-tratamiento, el número de DE genes cambia. Para comprobar si las rutas metabólicas activadas son distintas (que tiene pinta de que sí) habría que hacer un WGCNA y sobre todo un GO enrichment analysis. Lo mismo pasa cuando comparamos tratamientos entre distintas combinaciones pua-porta. Habría qué estudiar qué genes/rutas metabólicas diferentes se activan.
+
+Aunque los heatmaps solamente tengan buena pinta en ciertos casos, prefiero hacer el WGCNA independientemente para cada comparativa en lugar de con todos los genes porque los heatmaps de las comparativas independientes tienen mejor pinta que los de los módulos del análisis anterior. 
+
+Por lo tanto, pruebo a cambiar la estrategia y a hacer ahora a posteriori un análisis WGCNA independiente para cada comparativa. Este WGCNA me ayudará a encontrar genes co-expresados dentro de cada comparativa, que por lo tanto, probablemente pertenecerán a las mismas rutas metabólicas. 
 
 ### WGCNA independiente para cada comparativa
 
