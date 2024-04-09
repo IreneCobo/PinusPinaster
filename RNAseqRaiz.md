@@ -12,12 +12,12 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 **Descripción del nombre**
 1. Hasta el guión bajo _ no proporciona información de la muestra
 
-2. Tras el guión bajo nos podemos encontrar o un 1 o un 18 (como en este ejemplo) que habla del portainjertos. El portainjertos contiene la raíz y un trozo grande de tallo. 
+2. Tras el guión bajo nos podemos encontrar o un 1 o un 18 (en este ejemplo pone 18) que habla del portainjertos. El portainjertos contiene la raíz y un trozo grande de tallo. 
 
 - 1: Portainjertos sensible 
 - 18: Portainjertos tolerante
 
-3. Después hay un guión -. Lo que viene después del guión es el número del individuo (en este caso es el individuo 7)
+3. Después hay un guión -. Lo que viene después del guión es el número de réplica (en este caso es la réplica 7).A  cada réplica se le dio un número de manera totalmente aleatoria. La explicación de las réplicas está más abajo.
 
 4. Luego viene un código de 3 letras (en este caso RCO)
 
@@ -25,7 +25,7 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 - C: Habla del tratamiento que puede ser Control (o S sequía)
 - O: Habla de la púa, que puede ser Oria, que es tolerante a la sequía (o G Galicia, sensible a la sequía). La púa se colocó muy arriba, luego la púa tiene acículas y un poco de tallo
 
-Las púas son réplicas clonales de los parentales (uno de Galicia, y por lo tanto, se espera sensible a la sequía, y otro de Oria, y por lo tanto, se espera tolerante a la sequía), mientras que los portas son los descendientes de la F1 resultante del cruzamiento de los parentales Galicia x Oria. Se hizo un estudio fenotípico de la F1 y se determinó quienes eran sensibles y tolerantes a la sequía. De ellos se eligieron los individuos 1 (sensible) y 18 (tolerante) para usar como portainjertos (en este artículo se explica por qué (De Miguel et al. 2016). 
+Las púas son ramas de los parentales (uno de Galicia, y por lo tanto, se espera sensible a la sequía, y otro de Oria, y por lo tanto, se espera tolerante a la sequía), mientras que los portas son los descendientes de la F1 resultante del cruzamiento de los parentales Galicia x Oria. Se hizo un estudio fenotípico de la F1 y se determinó quienes eran sensibles y tolerantes a la sequía. De ellos se eligieron los individuos 1 (sensible) y 18 (tolerante) para usar como portainjertos (en este artículo se explica por qué (De Miguel et al. 2016)) y se hicieron réplicas clonales. Para las púas se utilizaron diferentes ramas de Galicia y Oria como púas. No pudieron hacerse clones como tal de las púas como sí se hizo de los portas (aunque las ramas de un mismo índividuo genéticamente son iguales) porque al estar en un estado madurativo avanzado, no es posible clonar. 
 
 ### 2. Análisis de las raw reads de RNA-seq
 
