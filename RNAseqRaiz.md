@@ -17,7 +17,7 @@ Lib-Truseq-RNA-173367_18-7-RCO_P_151471_S16_R1_001.fastq
 - 1: Portainjertos sensible 
 - 18: Portainjertos tolerante
 
-3. Después hay un guión -. Lo que viene después del guión es el número de réplica (en este caso es la réplica 7).A  cada réplica se le dio un número de manera totalmente aleatoria. La explicación de las réplicas está más abajo.
+3. Después hay un guión -. Lo que viene después del guión es el número de réplica (en este caso es la réplica 7).A  cada réplica se le dio un número de manera totalmente aleatoria. Por lo tanto, que los números de réplica de dos construcciones coincidan no significa nada, es casualidad. La explicación de las réplicas está más abajo.
 
 4. Luego viene un código de 3 letras (en este caso RCO)
 
